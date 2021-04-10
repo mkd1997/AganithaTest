@@ -9,12 +9,17 @@ public abstract class X {
         this.name = name;
     }
 
-    public void execute() {
-        System.out.println(this.name);
-        System.out.println(this.getClass().getName());
-    }
+    public abstract void execute();
 
     public void shutdown() {
         System.out.println("Shutting down!");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
